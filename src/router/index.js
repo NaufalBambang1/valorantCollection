@@ -10,23 +10,31 @@ const routes = [
   {
     path: '/agents',
     name: 'agents',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: function () {
-      return import(/* webpackChunkName: "about" */ '../views/Agents.vue')
+      return import('../views/Agents.vue')
+    }
+  },
+  {
+    path: '/agents/:id',
+    name: 'agentsDetail',
+    component: function () {
+      return import('../views/AgentsDetail.vue')
     }
   },
   {
     path: '/weapons',
     name: 'weapons',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: function () {
-      return import(/* webpackChunkName: "about" */ '../views/Weapons.vue')
+      return import('../views/Weapons.vue')
     }
-  }
+  },
+  {
+    path: '/weapons/:id',
+    name: 'weaponsDetail',
+    component: function () {
+      return import('../views/WeaponsDetail.vue')
+    }
+  },
 ]
 
 const router = createRouter({
