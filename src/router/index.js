@@ -1,5 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import Agents from '../views/Agents.vue'
+import AgentsDetail from '../views/AgentsDetail.vue'
+import Weapons from '../views/Weapons.vue'
+import WeaponsDetail from '../views/WeaponsDetail.vue'
 
 const routes = [
   {
@@ -10,30 +14,22 @@ const routes = [
   {
     path: '/agents',
     name: 'agents',
-    component: function () {
-      return import('../views/Agents.vue')
-    }
+    component: Agents
   },
   {
     path: '/agents/:id',
     name: 'agentsDetail',
-    component: function () {
-      return import('../views/AgentsDetail.vue')
-    }
+    component: AgentsDetail
   },
   {
     path: '/weapons',
     name: 'weapons',
-    component: function () {
-      return import('../views/Weapons.vue')
-    }
+    component: Weapons
   },
   {
     path: '/weapons/:id',
     name: 'weaponsDetail',
-    component: function () {
-      return import('../views/WeaponsDetail.vue')
-    }
+    component: WeaponsDetail
   },
 ]
 
