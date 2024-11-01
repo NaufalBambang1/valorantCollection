@@ -120,7 +120,7 @@
   </template>
 
 <script setup>
-    import { ref, watch, defineProps, defineEmits } from 'vue'
+    import { ref, defineProps, defineEmits } from 'vue'
 
     const isModalOpen = ref(false);
     const props = defineProps({

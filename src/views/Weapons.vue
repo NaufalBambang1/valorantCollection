@@ -15,9 +15,9 @@
   import {useStore} from 'vuex'
   
   const store = useStore()
-  const dataWeapons = ref([]);
-  const searchQuery = ref("");
-  const selectedFilter = ref("All");
+  const dataWeapons = ref([])
+  const searchQuery = ref("")
+  const selectedFilter = ref("All")
   const isLoading = ref(true)
   const isModalOpen = ref(false)
   const title = ref("weapons")

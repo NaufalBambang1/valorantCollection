@@ -54,22 +54,22 @@
 </template>
 
 <script setup>
-import {onMounted,ref} from 'vue'
-import { useRoute } from 'vue-router'
-import {useStore} from 'vuex'
+    import {onMounted,ref} from 'vue'
+    import { useRoute } from 'vue-router'
+    import {useStore} from 'vuex'
 
-const store = useStore()
-const route = useRoute()
-const dataAgentsDetail = ref([])
-const selectedAbilities = ref(0)
+    const store = useStore()
+    const route = useRoute()
+    const dataAgentsDetail = ref([])
+    const selectedAbilities = ref(0)
 
-onMounted(async ()=>{
-    try{
-        const agentsDetailResponse = await store.dispatch('getDataAgentsDetail', route.params.id)
-        dataAgentsDetail.value = agentsDetailResponse.data.data
-    }
-    catch(error){
-        console.log(error)
-    }
-})
+    onMounted(async ()=>{
+        try{
+            const agentsDetailResponse = await store.dispatch('getDataAgentsDetail', route.params.id)
+            dataAgentsDetail.value = agentsDetailResponse.data.data
+        }
+        catch(error){
+            console.log(error)
+        }
+    })
 </script>
